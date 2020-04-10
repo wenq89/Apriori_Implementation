@@ -13,6 +13,7 @@ def find_countries():
 
 
 # select transaction histories that are happened in UK to excel file, output to refined_dataset.xlsx
+# the regeneration only needs to be done once
 def regenerate_new_datafile():
     excel_data_df = pd.read_excel(CONSTANTS['ORIGINAL_FILE'])
 
@@ -39,7 +40,7 @@ def cleanup():
     data = pd.read_excel(CONSTANTS['REFINED_FILE'])
 
     # trim out [ at the beginning and ] at the end.
-    for ch in ['[', ']']:
+    for ch in ['[', ']', '\n']:
         data['StockCode'] = data['StockCode'].str.replace(ch, '')
 
     return data
