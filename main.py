@@ -12,7 +12,7 @@ def main():
     data = cleanup()
     end_time = time.time()
     print("Time (", end_time - start_time, ") clean up completed")
-    apr_data = apriori(data, 796)
+    apr_data = apriori(data, 796) #796
     end_time = time.time()
     apr_count = len(apr_data.index)
     apr_data.to_excel(CONSTANTS['APRI_OUTPUT_FILE'])

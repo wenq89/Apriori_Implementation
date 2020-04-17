@@ -5,7 +5,7 @@ support = 1000
 Time ( 1.3741447925567627 ) clean up completed
 Time(single): 7.367697477340698
 
-TSET_OUTPUT: frequent single item set: 28
+TSET_OUTPUT: frequent single item set: 28 {a,b,c} - {ab,ac,bc} O(n^2) of combination of 2-itemsets
 
 TSET_OUTPUT: no frequent 2 -item sets, Time( 2 -itemset): 21.353843688964844
 Time ( 22.775858402252197 ) Apriori data mining completed
@@ -68,6 +68,7 @@ support = 797
 Time ( 1.4109649658203125 ) clean up completed
 Time(single): 8.064077615737915
 
+
 TSET_OUTPUT: frequent single item set: 56
 
 TSET_OUTPUT: no frequent 2 -item sets, Time( 2 -itemset): 41.72064995765686
@@ -90,7 +91,7 @@ Test result Analysis
 -----------------------------
 when support >=796, there is only single frequent item set and the program runs perfectly
 however, if the support < 796, there will be some k>=2-itemset, and my memory is exhausted
-If there is 57 single frequent item sets, there are 57! possible 2-itemeset, then the program is crashed
+If there is 57 single frequent item sets, there are (1+56)*56/2 possible 2-itemeset, then the program is crashed
 But in the case of support = 797:
 the program spent 8 seconds to get all the single frequent item set, and used 41-8=33 seconds to try to find frequent 2-itemset
 
@@ -101,7 +102,7 @@ monetary consumption is wasted and no frequent item sets are found.
 -------------------------
 small dataset for Apriori
 -------------------------
-This test is only for 10 transactions with 20 domain items
+This test is only for 10 transactions with 20 domain items {a,b,c ...}
 
 TSET_OUTPUT: frequent 2 -item sets end time: 0.24637985229492188
 additional frequent item set found:  224
