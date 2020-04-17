@@ -72,8 +72,8 @@ final output which contains all the frequent item sets.
 
 testing: using different support values | big datset and small dataset
 -
-see test_result file
+find test_result file
 
 Apriori algorithm running time analysis
 -
-see Apr_figure.jpg
+find files under images/ directory
