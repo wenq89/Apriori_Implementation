@@ -76,4 +76,4 @@ find test_result file
 
 Apriori algorithm running time analysis
 -
-find files under images/ directory
+find files under images/ directory1
